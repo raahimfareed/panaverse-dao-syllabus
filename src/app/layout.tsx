@@ -1,9 +1,9 @@
-import './globals.css'
+import "@/styles/globals.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -11,8 +11,14 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
-      <body>{children}</body>
+      <head>
+        <link rel="preconnect" href="https://fonts.bunny.net" />
+        <link
+          href="https://fonts.bunny.net/css?family=poppins:200,400,700,900"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="relative">{children}</body>
     </html>
-  )
+  );
 }

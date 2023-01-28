@@ -71,7 +71,6 @@ const Index = () => {
             <li>VOD Lectures</li>
             <li>Includes full stack web development</li>
           </ul>
-          <EnrollBtn className="mt-6" />
         </div>
       </section>
       <section className="px-4 lg:px-0 py-24">

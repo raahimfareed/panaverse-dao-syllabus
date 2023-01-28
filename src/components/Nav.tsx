@@ -4,17 +4,17 @@ import Link from "next/link";
 
 import panaverseLogo from "@/images/panaverse-logo.png";
 import { MdClose, MdMenu } from "react-icons/md";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
-  const path =
-    usePathname()
-      ?.split("/")
-      .filter((n) => n) ?? [];
+  const pathname = usePathname();
+  const path = pathname?.split("/").filter((n) => n) ?? [];
+
+  useEffect(() => close(), [pathname]);
 
   return (
     <nav className="w-full bg-white py-8 px-4 lg:px-0 sticky top-0 z-10">

@@ -38,11 +38,11 @@ const Courses = () => {
             with the help of the students in the IT sector.
           </p>
           <p className="mt-3">
-            Each program is usually 13 weeks long with 4 quarters. First three
-            quarters of each program are general where the students learn Web
-            2.0 and the necessary technologies to start earning money. Following
-            the first three quarters, specific courses depending on the program
-            start
+            Each program is usually 1 and a half years long with 4 quarters,
+            each quarter 13 weeks long. First three quarters of each program are
+            general where the students learn Web 2.0 and the necessary
+            technologies to start earning money. Following the first three
+            quarters, specific courses depending on the program start
           </p>
           <p className="mt-3">
             All material of panaverse is open source and publicly available on

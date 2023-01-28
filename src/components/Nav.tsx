@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 import panaverseLogo from "@/images/panaverse-logo.png";
 import { MdClose, MdMenu } from "react-icons/md";
+import { usePathname, useRouter } from "next/navigation";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
+
+  const path =
+    usePathname()
+      ?.split("/")
+      .filter((n) => n) ?? [];
 
   return (
     <nav className="w-full bg-white py-8 px-4 lg:px-0 sticky top-0 z-10">
@@ -38,15 +45,28 @@ const Nav = () => {
             Panaverse DAO
           </Link>
           <li>
-            <Link href="/" className="font-bold">
+            <Link
+              href="/"
+              className={path.length == 0 ? "font-bold" : undefined}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/">Courses</Link>
+            <Link
+              href="/courses"
+              className={path[0] == "courses" ? "font-bold" : undefined}
+            >
+              Courses
+            </Link>
           </li>
           <li>
-            <Link href="/">About</Link>
+            <Link
+              href="/about"
+              className={path[0] == "about" ? "font-bold" : undefined}
+            >
+              About
+            </Link>
           </li>
           <li className="lg:hidden">
             <a

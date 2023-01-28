@@ -5,7 +5,7 @@ export default function Head() {
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
         name="description"
-        content="Panaverse Decentralized Application Organization"
+        content="Panaverse Decentralized Autonomous Organization"
       />
       <link rel="icon" href="/favicon.ico" />
     </>

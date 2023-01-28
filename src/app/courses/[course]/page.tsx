@@ -952,7 +952,6 @@ const Course = ({
             </ol>
           </div>
           <div className="mt-12 flex flex-wrap gap-4">
-            <EnrollBtn />
             <Link href="/courses" className="btn w-fit block secondary">
               View Other Courses
             </Link>
